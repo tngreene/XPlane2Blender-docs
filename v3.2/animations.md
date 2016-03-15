@@ -15,18 +15,18 @@ If the object is not yet animated, animate it. You can animate the object in any
 
 1. Go to the **XPlane** tab in the Object-Properties.
 2. Under *Datarefs* hit **Add dataref** to add a new dataref binding.<br/>
-        ![](images/docs-3.2x-animations_1.png)
+  ![](images/docs-3.2x-animations_1.png)
 3. Enter the **Path** to the dataref. If you don't know the path hit **Search dataref**. This will open your browser with a dataref search page.<br/>
-        ![](images/docs-3.2x-animations_2.png)<br/>
-        If the object is not yet animated animate it now and continue with the next steps.
+  ![](images/docs-3.2x-animations_2.png)<br/>
+  If the object is not yet animated animate it now and continue with the next steps.
 4. Go to a frame you want to export as a keyframe to X-Plane.
 5. Now enter the **Value** of the dataref and hit the **key-icon** next to the Value-input to create a dataref-keyframe. The dataref value will turn green indicating a keyframe. When the dataref in X-Plane reaches this value, the animation will be exactly at this keyframe.<br/>
-        ![](images/docs-3.2x-animations_3.png)
+  ![](images/docs-3.2x-animations_3.png)
 6. Go to the next frame you want to export.
 7. Enter another **Value** of the dataref and hit the key-icon again to create another dataref-keyframe. The dataref value will turn green again and yellow in all frames between two dataref-keyframes. The animation of the object will now be interpolated between these two keyframes. 
 8. Repeat step 5 for each frame you want to export.
 9. If your animation only contains location changes change it's type to "Loc" under **Animation**, if it only contains rotation change it to **Rot**. If it contains both keep it at "LocRot". If it is a hide/show animation [see "Show / Hide animations" below](./docs-3.2x-Animations#show--hide-animations).<br/>
-        ![](images/docs-3.2x-animations_4.png)
+  ![](images/docs-3.2x-animations_4.png)
 
 ## Bone animation
 
