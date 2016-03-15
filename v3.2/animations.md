@@ -15,29 +15,29 @@ If the object is not yet animated, animate it. You can animate the object in any
 
 1. Go to the **XPlane** tab in the Object-Properties.
 2. Under *Datarefs* hit **Add dataref** to add a new dataref binding.<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_1.png]]
+        ![](images/docs-3.2x-animations_1.png)
 3. Enter the **Path** to the dataref. If you don't know the path hit **Search dataref**. This will open your browser with a dataref search page.<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_2.png]]<br/>
+        ![](images/docs-3.2x-animations_2.png)<br/>
         If the object is not yet animated animate it now and continue with the next steps.
 4. Go to a frame you want to export as a keyframe to X-Plane.
 5. Now enter the **Value** of the dataref and hit the **key-icon** next to the Value-input to create a dataref-keyframe. The dataref value will turn green indicating a keyframe. When the dataref in X-Plane reaches this value, the animation will be exactly at this keyframe.<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_3.png]]
+        ![](images/docs-3.2x-animations_3.png)
 6. Go to the next frame you want to export.
 7. Enter another **Value** of the dataref and hit the key-icon again to create another dataref-keyframe. The dataref value will turn green again and yellow in all frames between two dataref-keyframes. The animation of the object will now be interpolated between these two keyframes. 
 8. Repeat step 5 for each frame you want to export.
 9. If your animation only contains location changes change it's type to "Loc" under **Animation**, if it only contains rotation change it to **Rot**. If it contains both keep it at "LocRot". If it is a hide/show animation [see "Show / Hide animations" below](./docs-3.2x-Animations#show--hide-animations).<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_4.png]]
+        ![](images/docs-3.2x-animations_4.png)
 
 ## Bone animation
 
 **Important:** Before parenting the Bone to the Object you want to animate, make sure you applied ***Rotation & Scale*** both to the Object and the Armature (in Object mode)!
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_4_5.png]]<br/>
+![](images/docs-3.2x-animations_4_5.png)<br/>
 
 Animating bones is working almost the same as animating objects.
 The only difference is that you have to switch to the **Bone-Properties** while in **Pose-Mode** and there you can add datarefs to the Bone.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_5.png]]<br/>
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-animations_6.png]]
+![](images/docs-3.2x-animations_5.png)<br/>
+![](images/docs-3.2x-animations_6.png)
 
 **Note:** The key-framed dataref value does not get colored yellow or green as with object-datarefs.
 This is due to a long lasting Blender bug.
@@ -68,4 +68,4 @@ Show/Hide animations require two values. The show or hide will take effect betwe
 You'll mostly need the dataref twice to make it appear and disappear correctly.
 For example if your dataref value ranges from 0.0 to 1.0 and you want your object to be hidden at 0.0 and visible at 1.0 you need to add the dataref twice. The first one needs a "Hide" animation with it's first value 0.0 and second value 1.0. The second dataref needs a "Show" animation with it's first value 1.0 and second value 1.0 or higher.
 
-If you think this is a good thing [buy me a beer](./Donations).
+If you think this is a good thing [buy me a beer](../../Donations).
