@@ -1,12 +1,12 @@
-- [In my X-Plane layer I've pointed to the right texture, but the exported object contains a wrong texture path like "/././././...texture.png".](docs-3.2x-FAQ#in-my-x-plane-layer-ive-pointed-to-the-right-texture-but-the-exported-object-contains-a-wrong-texture-path-like-texturepng)
-- [I have a mesh that is transparent (glass). To correctly display it, it must be drawn at last. That means it needs to be written last in the OBJ file.](docs-3.2x-FAQ#i-have-a-mesh-that-is-transparent-glass-to-correctly-display-it-it-must-be-drawn-at-last-that-means-it-needs-to-be-written-last-in-the-obj-file)
-- [How do I add cockpit regions?](docs-3.2x-FAQ#how-do-i-add-cockpit-regions)
-- [XPlane2Blender does not support feature X from the OBJ-file format specification and I need to write my _hacks_ into the OBJ-file after every export.](docs-3.2x-FAQ#xplane2blender-does-not-support-feature-x-from-the-obj-file-format-specification-and-i-need-to-write-my-hacks-into-the-obj-file-after-every-export)
-- [I've assigned a texture to my materials but I can't see it in Plane-Maker or X-Plane.](docs-3.2x-FAQ#ive-assigned-a-texture-to-my-materials-but-i-cant-see-it-in-plane-maker-or-x-plane)
-- [I have an aileron/rudder/... that need's to be rotated along an arbitary axis. How can I do that?](docs-3.2x-FAQ#i-have-an-aileronrudder-that-needs-to-be-rotated-along-an-arbitary-axis-how-can-i-do-that)
-- [How can I quickly see if my animation exported correctly?](docs-3.2x-FAQ#how-can-i-quickly-see-if-my-animation-exported-correctly)
-- [I've opened files created with an older version of XPlane2Blender and now (all) manipulators have the wrong type.](docs-3.2x-FAQ#ive-opened-files-created-with-an-older-version-of-xplane2blender-and-now-all-manipulators-have-the-wrong-type)
-- [My objects look very dark when brought into X-Plane.](docs-3.2x-FAQ#my-objects-look-very-dark-when-brought-into-x-plane)
+- [In my X-Plane layer I've pointed to the right texture, but the exported object contains a wrong texture path like "/././././...texture.png".](#in-my-x-plane-layer-ive-pointed-to-the-right-texture-but-the-exported-object-contains-a-wrong-texture-path-like-texturepng)
+- [I have a mesh that is transparent (glass). To correctly display it, it must be drawn at last. That means it needs to be written last in the OBJ file.](#i-have-a-mesh-that-is-transparent-glass-to-correctly-display-it-it-must-be-drawn-at-last-that-means-it-needs-to-be-written-last-in-the-obj-file)
+- [How do I add cockpit regions?](#how-do-i-add-cockpit-regions)
+- [XPlane2Blender does not support feature X from the OBJ-file format specification and I need to write my _hacks_ into the OBJ-file after every export.](#xplane2blender-does-not-support-feature-x-from-the-obj-file-format-specification-and-i-need-to-write-my-hacks-into-the-obj-file-after-every-export)
+- [I've assigned a texture to my materials but I can't see it in Plane-Maker or X-Plane.](#ive-assigned-a-texture-to-my-materials-but-i-cant-see-it-in-plane-maker-or-x-plane)
+- [I have an aileron/rudder/... that need's to be rotated along an arbitary axis. How can I do that?](#i-have-an-aileronrudder-that-needs-to-be-rotated-along-an-arbitary-axis-how-can-i-do-that)
+- [How can I quickly see if my animation exported correctly?](#how-can-i-quickly-see-if-my-animation-exported-correctly)
+- [I've opened files created with an older version of XPlane2Blender and now (all) manipulators have the wrong type.](#ive-opened-files-created-with-an-older-version-of-xplane2blender-and-now-all-manipulators-have-the-wrong-type)
+- [My objects look very dark when brought into X-Plane.](#my-objects-look-very-dark-when-brought-into-x-plane)
 
 
 ### In my X-Plane layer I've pointed to the right texture, but the exported object contains a wrong texture path like "/././././...texture.png".
@@ -58,4 +58,4 @@ Also check that the "Emit" value under "Shading" is set to 0.0 to not make the o
 
 *Note to Cycles*: If you're using Cycles to bake the textures, don't forget to switch back to "Blender Render" and assign non-cycles materials to all the objects.
 
-If you think this is a good thing [buy me a beer](./Donations).
+If you think this is a good thing [buy me a beer](../../Donations).
