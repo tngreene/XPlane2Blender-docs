@@ -7,10 +7,10 @@ Typical uses of conditionalization are to change the appearance of an object whe
 To make use of conditions in XPlane2Blender do the following:
 
 1. In the Scene tab under XPlane set the X-Plane version to at least 10.0x<br/>
-    [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-conditions_1.png]]
+    ![](images/docs-3.2x-conditions_1.png)
 
 2. **To conditionally hide/show an object:** Select an object and within the Object tab under XPlane click on **"Add Condition"**.<br/>
-    [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-conditions_2.png]]<br/>
+    ![](images/docs-3.2x-conditions_2.png)<br/>
     <br/>
     **To conditionally hide/show all object with a material:** Select an object and within the Material tab under XPlane click on **"Add Condition"**.
 3. Now select a condition from the dropdown and choose if this condition should be true or not.
@@ -18,4 +18,4 @@ To make use of conditions in XPlane2Blender do the following:
 
 
 
-If you think this is a good thing [buy me a beer](./Donations).
+If you think this is a good thing [buy me a beer](../../Donations).
