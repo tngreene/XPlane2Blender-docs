@@ -99,7 +99,7 @@ You can use that to also export the cockpit OBJ together with all other OBJs by 
 
 ![export OBJ files step 9](images/docs-3.2x-export-obj-files_9.png)
 
-<hr/>
+----
 
 ## Optimize/Debug
 
