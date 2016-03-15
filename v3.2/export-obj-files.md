@@ -13,7 +13,7 @@ However to make the export work we need to initiate the Blender layers to make t
 For this go to the _Scene_ Tab in the _Properties_ window.
 Now scroll down until you see a _XPlane_ panel. Open it up, if it is not already. Hit the button _Add X-Plane layers_.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_1.png]]
+![export OBJ files step 1](./images/docs-3.2x-export-obj-files_1.png)
 
 
 ### 2. Configure a X-Plane layer
@@ -24,11 +24,11 @@ If not enabled, check _Export_ to make the layer exportable.
 Within the _Name_ field type in the **name of the OBJ file** this layer should create, without the .obj extension.
 You can enter a relative path here.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_2.png]]
+![export OBJ files step 2](./images/docs-3.2x-export-obj-files_2.png)
 
 In the _Textures_ group you can select the texture files the OBJ should use. One OBJ file can only use one texture file.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_3.png]]
+![export OBJ files step 3](./images/docs-3.2x-export-obj-files_3.png)
 
 - The "Default" texture is the day texture,
 - the "Night" texture will be used as the lit/night texture and emits light depending on the texture brightness,
@@ -36,7 +36,7 @@ In the _Textures_ group you can select the texture files the OBJ should use. One
 
 If the OBJ file is the **cockpit Object**, check _Cockpit_.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_4.png]]
+![export OBJ files step 4](./images/docs-3.2x-export-obj-files_4.png)
 
 ### 3. Advanced X-Plane layer configuration
 
@@ -44,12 +44,12 @@ If the OBJ will be attached to the aircraft as a slung load you can set it's wei
 
 If the OBJ will have levels of detail select how many in the _Levels of detail_ dropdown.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_5.png]]
+![export OBJ files step 5](./images/docs-3.2x-export-obj-files_5.png)
 
 Each level of detail (= **LOD**) has a near and far clipping distance. The LOD will only be visible within these distances.
 When dealing with multiple LODs be sure to set the Near clipping distance of the higher LOD to the Far distance of the preceding LOD as shown in the next image.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_6.png]]
+![export OBJ files step 6](./images/docs-3.2x-export-obj-files_6.png)
 
 This will make your LODs compatible with X-Plane 9, as only X-Plane 10 allows for overlapping LODs.
 
@@ -72,14 +72,14 @@ To be sure all faces point to the correct side you have to make the face normals
 You can view the face normals of an object when in _Edit-Mode_.
 In the _View Properties_ (hit N while hovering over the viewport) under _Mesh Display_ activate the the display of face normals as lines.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_7.png]]
+![export OBJ files step 7](./images/docs-3.2x-export-obj-files_7.png)
 
 If the lines are to short increase the _Size_ next to this button.
 
 The other option is to make all faces of an object "double-sided".
 This can be done in the mesh tab in the properties window.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_8.png]]
+![export OBJ files step 8](./images/docs-3.2x-export-obj-files_8.png)
 
 However this is not recommended as it means a performance loss in the game and possibly wrong lighting of faces pointing backwards.
 
@@ -97,7 +97,7 @@ To finally export go to _File > Export > XPlane Object (.obj)_ and choose the di
 Remember, that you can enter relative paths into the XPlane-Layer Name field.
 You can use that to also export the cockpit OBJ together with all other OBJs by exporting it to your airplanes _objects_ folder, but setting the _Name_ of the cockpit Layer to _../my_aircract_cockpit_.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_9.png]]
+![export OBJ files step 9](images/docs-3.2x-export-obj-files_9.png)
 
 <hr/>
 
@@ -105,7 +105,7 @@ You can use that to also export the cockpit OBJ together with all other OBJs by 
 
 In the properties window under the _Scene_ tab in the _XPlane_ panel you can find two options you can enable: Optimize and Debug.
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-export-obj-files_10.png]]
+![export OBJ files step 10](images/docs-3.2x-export-obj-files_10.png)
 
 **_Optimize_** will reduce the size of your OBJ files by removing duplicate vertices, however this can take up to several minutes depending on the total number of vertices your objects have.
 
@@ -120,4 +120,4 @@ Enable this if you have trouble exporting, or things like animations do not show
 Also send these log files together with your bug reports.
 
 
-If you think this is a good thing [buy me a beer](./Donations).
+If you think this is a good thing [buy me a beer](../../Donations).
