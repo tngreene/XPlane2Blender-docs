@@ -20,11 +20,11 @@ Blender will now look for additional addons/scripts within your _blender-scripts
 1. Download the latest version of XPlane2Blender 3.2x [here](https://github.com/der-On/XPlane2Blender/releases) by selecting one of the listed downloads clicking the _zip_ or _tar.gz_ icons.
         ![installation step 3](./images/docs-3.2x-installation_3.png)
 2. Extract the contents of the archive somewhere on your computer. You will get a folder named something like _XPlane2Blender-3.20.x_. Within this folder navigate to **blender_25/** and copy/move the folder **io_xplane2blender** into your **blender-scripts/addons** folder. (Afterwards you can safely delete the left behind folders, they are meant for developers.)
-        <pre><code>
+        ```
         XPlane2Blender-3.20.x
             > blender_25
-                > <strong>io_xplane2blender</strong>
-        </code></pre>
+                > io_xplane2blender
+        ```
 3. Open Blender and open up the User-Preferences Dialog by going to _File > User Preferences_.
         ![installation step 4](./images/docs-3.2x-installation_1.png)
 4. Go to the **Addons** tab select **Import-Export** as Category and start typing _XPlane_ into the search box in the top left.
