@@ -11,14 +11,14 @@ Xplane2blender can only export the following material properties to Xplane:
 - specular intensity (specular size will always be 128)
 - Emit value
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_1.png]]
 
+![](images/docs-3.2x-materials-and-textures_1.png)
 
 ### X-plane related material properties
 
 You have additional material properties under the Xplane panel in each material:
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_2.png]]
+![](images/docs-3.2x-materials-and-textures_2.png)
 
 - **draw**: when disabled the surface will be invisible in xplane, but it will still be physically there. Use this for low poly proxy manipulator handles for example. Using high poly objects for manipulators is not recommended, as it's pretty expensive.
 - **override specularity**: when enabled you can set specularity values above 1.0 with the shiny ratio to simulate very glossy surfaces.
@@ -58,28 +58,28 @@ To get a direct feedback of how a texture will look like in X-Plane within the B
 5. Set the viewport shading to **Texture** by hitting ALT+Z
 6. Now you need to assign the correct textures to all materials you want to preview
 
-[[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_3.png]]
+![](images/docs-3.2x-materials-and-textures_3.png)
 
 #### Texture preview for the default texture / day texture
 1. Add a texture of type "Image or Movie" to the material you want to preview in the viewport
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_4.png]]
+        ![](images/docs-3.2x-materials-and-textures_4.png)
 2. Select the texture file you've set as the Default / Day texture as the image
 3. Under **Mapping** select **UV** as Coordinates and keep Projection at "Flat".
 4. Under **influence** check **Color** and set it's value to 1.0<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_5.png]]
+        ![](images/docs-3.2x-materials-and-textures_5.png)
 5. Leave the **color space** at **sRGB** as this fits for most cases and will prevent color shift in the viewport
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_6.png]]
+        ![](images/docs-3.2x-materials-and-textures_6.png)
 
 #### Texture preview for the normal/specular texture
 1. Add a texture of type "Image or Movie" to the material you want to preview in the viewport
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_7.png]]
+        ![](images/docs-3.2x-materials-and-textures_7.png)
 2. Select the texture file you've set as the normal / specular texture as the image
 3. Under **Mapping** select **UV** as Coordinates and keep Projection at "Flat".
 4. Under **influence** uncheck **Color** and check **Normal** and set it's value to 1.0<br/>
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_9.png]]
+        ![](images/docs-3.2x-materials-and-textures_9.png)
 5. Under **Image Sampling** uncheck **Alpha: Use** and check **Normal Map** and as normal map type select **Tangent**
 6. Leave the **color space** at **sRGB** as this fits for most cases and will prevent color shift in the viewport
-        [[https://raw.github.com/wiki/der-On/XPlane2Blender/images/docs-3.2x-materials-and-textures_8.png]]
+        ![](images/docs-3.2x-materials-and-textures_8.png)
 
 #### Texture preview for the specular texture
 In X-Plane the normal textures alpha channel is used as the specular texture defining the specular intensity. In Blender we cannot use the Alpha channel like that and thus have to extract the alpha channel from the normal / specular texture as a grayscale image. You can do this using your Image-Editor or also using Blenders compositor nodes. However I guess you will probably already have a grayscale specularity image and actually need to manually set it as alpha channel for the normal map.
@@ -127,4 +127,4 @@ There is a lot of try and error with render baking and you will need to fine adj
 - render baking does not use anti-aliasing! That's why you need higher sample rates for ambient occlusion, Area-Lights, Ray-traced soft shadows and things like mirror reflections. It's best to post-process the render baked images with a image-based antialising in your Image-Editor to reduce noise in the texture and to be able to reduce sample rates during render baking.
 
 
-If you think this is a good thing [buy me a beer](./Donations).
+If you think this is a good thing [buy me a beer](../../Donations).
