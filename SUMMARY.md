@@ -10,7 +10,7 @@
    * [Conditions](v3.2/conditions.md)
    * [FAQ](v3.2/faq.md)
 * [v3.3](v3.3/index.md)
-   * 3.3 Installation - Detailed Notes
+   * [3.3 Installation - Detailed Notes](v3.3/33_installation_-_detailed_notes.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
