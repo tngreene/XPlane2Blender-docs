@@ -16,8 +16,8 @@
    * [Animations](v3.3/animations.md)
    * [Conditions](v3.3/conditions.md)
    * Advanced Techniques
-   * [FAQ](v3.3/faq.md)
    * Manipulations
+   * [FAQ](v3.3/faq.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
