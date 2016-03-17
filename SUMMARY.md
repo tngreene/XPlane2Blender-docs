@@ -17,6 +17,7 @@
    * Animations
    * Conditions
    * Advanced Techniques
+   * Manipulations
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
