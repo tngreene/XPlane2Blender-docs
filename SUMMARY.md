@@ -16,6 +16,7 @@
    * [FAQ](v3.3/faq.md)
    * Animations
    * Conditions
+   * Advanced Techniques
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
