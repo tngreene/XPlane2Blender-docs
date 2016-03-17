@@ -15,6 +15,7 @@
    * [Export of OBJ files](v3.3/export_of_obj_files.md)
    * [FAQ](v3.3/faq.md)
    * Animations
+   * Conditions
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
