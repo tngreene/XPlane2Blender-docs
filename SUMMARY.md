@@ -12,7 +12,7 @@
 * [v3.3](v3.3/index.md)
    * [3.3 Installation - Detailed Notes](v3.3/33_installation_-_detailed_notes.md)
    * [Export of OBJ files](v3.3/export_of_obj_files.md)
-   * FAQ
+   * [FAQ](v3.3/faq.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
