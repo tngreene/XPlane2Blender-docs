@@ -1,4 +1,4 @@
-# 3.3 Installation - Detailed Notes
+# Installation - Detailed Notes
 
 ## Download Blender App
 Go to
