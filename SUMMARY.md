@@ -13,7 +13,7 @@
    * [3.3 Installation - Detailed Notes](v3.3/33_installation_-_detailed_notes.md)
    * [Export of OBJ files](v3.3/export_of_obj_files.md)
    * [FAQ](v3.3/faq.md)
-   * Materials and Textures
+   * [Materials and Textures](v3.3/materials_and_textures.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
