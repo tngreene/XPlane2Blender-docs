@@ -15,7 +15,7 @@
    * [Export of OBJ files](v3.3/export_of_obj_files.md)
    * [FAQ](v3.3/faq.md)
    * [Animations](v3.3/animations.md)
-   * Conditions
+   * [Conditions](v3.3/conditions.md)
    * Advanced Techniques
    * Manipulations
 * [Reporting Bugs](reporting-bugs.md)
