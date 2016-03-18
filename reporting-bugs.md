@@ -12,7 +12,7 @@ If you encounter a bug within XPlane2Blender please follow these steps to make i
 3. Open up the file causing the bug.
 4. Repeat the steps causing the bug.
 5. Look into the terminal/console and copy the error-message that might have showed up in it. It's best If you copy everything, so the developer gets as much information as possible.
-6. [Create a post at x-plane.org](http://forums.x-plane.org/index.php?showtopic=47934&page=1) / Or open up an [issue at Github](https://github.com/der-On/XPlane2Blender/issues) containing the following information: Your **Operating System**, your XPlane2Blender version (e.g. 3.20r1), your Blender version together with the **build-number** (if using Blender 2.5x this is the number after the "r"), the **exact steps for reproducing the error**, the **error message(s)**, if possible the file causing the error **cleared of all non-relevant parts for the bug**.
+6. [Create a post at x-plane.org](http://forums.x-plane.org/index.php?showtopic=94117) / Or open up an [issue at Github](https://github.com/der-On/XPlane2Blender/issues) containing the following information: Your **Operating System**, your XPlane2Blender version (e.g. 3.20r1), your Blender version together with the **build-number** (if using Blender 2.5x this is the number after the "r"), the **exact steps for reproducing the error**, the **error message(s)**, if possible the file causing the error **cleared of all non-relevant parts for the bug**.
 7. Wait and hope. We will look into it and fix it asap.
 
 Please only send me private messages/email to send me the buggy files. Do not send me your bug report in a PM or email. Making the bugs/problems and their solutions public will help all other users of XPlane2Blender with the same problem.
