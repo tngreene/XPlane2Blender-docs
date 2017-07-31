@@ -69,5 +69,10 @@ These settings change when and how a scenery object rests on the ground.
 
 ``Debug`` - **A checkbox which determines whether or not the layer will emmit debug informaiton. On by default.** The debug information will only show up if the Scene Setttings' [mkdownlink] ``Debug`` is also on. Turning this off will have no affect on OBJ preformance.
 
-Remove checkbox from everything
+## Export Path Directives
+Export Path Directives are unofficial OBJ directives that an internal Laminar Research tool uses to extract and automatically generate library.txt files from. EXPORT directives are ignored by X-Plane.
 
+When the button ``Add Export Path Directive`` is pressed, a new Export Path directive slot is added. When the x-mark on the directive is clicked, it is removed. Empty export path directives are skipped.
+
+## Custom Properties
+Custom properties are a key value pair, which get written directly to the header of the OBJ file, completely without validation. Some use this for 3rd party plug-ins or tooling or to gain access to new OBJ features that are not yet built into the exporter. For the latter case, this is NOT recommended and should be depricated as soon as the exporter supports the OBJ directive! Without rigerous, spec compliant, and tested validation OBJs could become invalid or slow.
