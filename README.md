@@ -1,3 +1,3 @@
 # XPlane2Blender Documentation
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Welcome to XPlane2Blender's manual for versions v3.1 and up. Choose an exporter version from the table of contents.
