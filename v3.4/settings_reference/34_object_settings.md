@@ -1,5 +1,6 @@
 # Object Settings
 Object Settings are accessed via the X-Plane panel under the Properties Pane's Object Tab. Object settings are set per object. Aside from ``Root Object`` being available when in Root Objects mode.
+Bone shares with this! TODO
 
 ## Relavent X-Plane Settings
 Blender Object's Transformation and Relation data can be important to exporting OBJs.
@@ -25,6 +26,8 @@ Datarefs tie Blender Animations and [X-Player Layers](mkdownlink) together to ex
 ``Animation Type`` - **A drop down menu of ``Show``,``Hide``, and ``Transform``. ``Transform`` by default.** Show/hide animations will show/hide animations the model during the set keyframes. Transform makes the exporter take the object's translate and rotate properties and turn them into keyframes. Certain optimzations are preformed as possible. There is no scale option because scaling cannot be keyframed in X-Planed, only statically applied to the verticies of a model once. See [animations](mkdown)
 
 If there is any animation data for this object or amatrue, the following options will appear:
+
+must also talk about rotation mode. Something missing here?
 
 #### Transform Animations
 Each frame on Blender's timeline is a place to add or remove an X-Plane Keyframe. 

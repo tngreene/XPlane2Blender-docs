@@ -24,6 +24,8 @@
    * [Scene Settings](v3.4/34_scene_settings.md)
    * [Object Settings](v3.4/34_object_settings.md)
    * [Layer Settings](v3.4/34_layer_settings.md)
+   * [Material Settings](v3.4/34_material_settings.md)
+   * [Texture Settings](v3.4/34_texture_settings.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
