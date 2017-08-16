@@ -1,41 +1,60 @@
 # Object Settings
-Object Settings are accessed via the X-Plane panel under the Properties Pane's Object Tab. Object settings are set per object. Aside from ``Root Object`` being available when in Root Objects mode.
-Bone shares with this! TODO
+A Blender object's settings are accessed via the X-Plane panel under the Properties Pane's "Object" tab. Each Blender object has it's settings are set per object. Object settings are available for mesh, empty, armature, and lamp data-blocks.
 
-## Relavent X-Plane Settings
+## Relevant X-Plane Settings
 Blender Object's Transformation and Relation data can be important to exporting OBJs.
 
 ### Transform
-``Location`` - **3 floats, used to describe the location of objects.** Changing these values changes where the model is located in X-Plane. These are written as verticies in the OBJ, and define animations.
+Setting | Description | Can Keyframe Values?
+------- |  ----------- | --------
+``Location``| The X, Y, Z co-ordinates of the object, relative to its parent or the world origin. Changing these values change where the model is located in X-Plane|Yes
+``Rotation``| The degrees of rotation around the X, Y, Z (axis-angle and Quaternion also have a W) axis of rotation the object, relative to its parent or the world origin. Changing these values change where the model is rotated in X-Plane|Yes
+``Scale``| The scaling factor of the model along it's X, Y, Z axis| No, the change to the object's vertices due to scaling is only saved to the OBJ once
 
-``Rotation`` - **3 floats, used to describe the rotation of objects.** Changing these values changes how the object is rotated in X-Plane. These are written as verticies in the OBJ, and define animations.
-
-``Scale`` - **3 floats, used to describe the scale of the object.** These are not keyframe able!
+``Rotation Mode`` - The rotation mode for Blender rotations. XPlane2Blender supports all modes and exports them equally
 
 ### Relations
-``Layers`` - **An array of true/false toggle switches that correspond to what Blender layers it is in.** In ``Layers Export Mode`` (mkdown), this changes which X-Plane layer, and if the layer is exported, which OBJ the object appears in. In Root Object mode it has no affect on the output or execution of the exporter.
+``Layers`` - An array of true/false toggle switches that correspond to what Blender layers it is in. When ``Export Mode`` is set to "Layers Mode", this changes which X-Plane layer (and therefore OBJ) the object gets collected and placed into. In "Root Object" mode it has no affect on the output or execution of the exporter
 
 ## XPlane2Blender Settings
+
+## Root Object
+ ``Root Object`` - Off by default. When ``Export Mode`` is set to "Root Object" this checkbox will appear. Checking it will set this to be a ``Root Object``. Settings to control the X-Plane layer this and child objects will be collected into will appear underneath. These are the exact same settings used in Layers Mode and found under the "Scene" tab.
+
 ### Datarefs
-Datarefs tie Blender Animations and [X-Player Layers](mkdownlink) together to export animations into OBJs. Blender's Location and Rotation keyframes provide the data for the motion, X-Plane's Dataref Keyframes provide the timing. This is different from the standard model of 3D Animation, where the animation tool not only provides geometry, keyframes, but also timing via the time line. X-Plane's internal clock provides the time, and stretches the animation between keyframes with its own animation engine. You just provide the 3D model and keyframes.
+Blender's location and rotation keyframes export where the geometry of objects should be in an animation, dataref keyframes describe how X-Plane should play the animation. This is different from traditional animation, where the animation tells a rendering engine (such as a 3D movie exporter) how to move geometry over time. Based on the value of a dataref inside X-Plane, X-Plane's rendering engine will interpolate between keyframes and display your model at specified positions.
 
-``Path`` - **A textfield which represents the dataref itself. Empty by default.** The path must be a valid dataref: either a standard X-Plane dataref or one supported by a plugin. It is not validated by XPlane2Blender.
+For instance, to animate a yoke moving forward and back based on a player's joystick, you would use the dataref "sim/joystick/yoke_pitch_ratio". In X-Plane, this dataref will have a value between -1.00 and 1.00 (inclusive). In Blender you would model the yoke (the geometry), and create at least 2 Blender location and rotation keyframes, say, all the way forward on frame 1 and all the back on frame 2. You would then create X-Plane dataref keyframes on frame 1 and frame 2, with a value of -1.00 and 1.00 respectively. In sim, if the dataref is 0, X-Plane will automatically figure out how to position and rotate the yoke halfway between the position specified at frame 1 and the position specified at frame 2 (aka half way). If the dataref is -.80, X-Plane will automatically position the yoke almost all the way towards the position specified at frame 1 (almost all the way forward).
 
-``Search datarefs`` - **A button that, when clicked, will open the default web browser to the site [https://www.siminnovations.com/xplane/dataref/index.php](https://www.siminnovations.com/xplane/dataref/index.php) where one can search for applicable datarefs.** siminnovatoins.com is a third-party website not supported by Laminar Research. It is provided as a convience only and is not garunteed to be correct.
+The more frames you add in Blender, the more precisely you can control the animation. Suppose the yoke in your aircraft has a dead-zone near the half way point. By specifying additional frames to show a slow down and specifying at what value of "sim/joystick/yoke_pitch_ratio" the player should see that frame, you can produce complex animations!
 
-``Animation Type`` - **A drop down menu of ``Show``,``Hide``, and ``Transform``. ``Transform`` by default.** Show/hide animations will show/hide animations the model during the set keyframes. Transform makes the exporter take the object's translate and rotate properties and turn them into keyframes. Certain optimzations are preformed as possible. There is no scale option because scaling cannot be keyframed in X-Planed, only statically applied to the verticies of a model once. See [animations](mkdown)
+Since Blender's frames per second based timeline and X-Plane's dataref based "timeline" are different, you can use Blender's animation tools to preview but not directly export animations.
 
-If there is any animation data for this object or amatrue, the following options will appear:
+#### Dataref Animation Details 
+Use ``Add Dataref`` to add a dataref animation section, and click the small white ``X`` in the top right corner of a dataref animation section to remove it.
 
-must also talk about rotation mode. Something missing here?
+``Dataref Path`` - Empty by default, this is the dataref for this animation. The dataref must be a standard X-Plane dataref or one supported by a plugin. It is not validated by XPlane2Blender.
 
-#### Transform Animations
-Each frame on Blender's timeline is a place to add or remove an X-Plane Keyframe. 
-``Add/Update Keyframe Button`` and ``Remove Keyframe Button`` - Each button, with the icon of a key and key with a red slash through it, add and remove X-Plane Dataref keyframes to an object. These key frames are combined with the Blender's keyframes and exported as animation inside the OBJ.
+``Search datarefs`` - When clicked, the default web browser will open the site https://www.siminnovations.com/xplane/dataref/index.php where one can search for applicable datarefs. www.siminnovations.com is a third-party website not supported by Laminar Research. It is provided as a convenience only and is not guaranteed to be up to date or correct.
 
-``Value`` - **The value of the dataref for X-Plane to keyframe to and interpolate with (fix that). 0 by default**. You must look up the documentation for each dataref. Some will only accept an integer, others will only accept a float between -1 and 1. This is not validated by XPlane2Blender. Every time you change the value, you must also click the Add Keyframe button.
+``Animation Type`` - The type of animation to export. The types X-Plane supports are "Show", "Hide", and "Transform" (the default).
 
-``Loops`` - **A float, incrementing by, .03, describing the amount of loops the animation will preform. 0.00 by default, making for 0% looping.** See [whatever] for more details.
+- "Show"/"Hide" animations show or hide the object when a dataref is greater than or equal to ``Value 1`` and less than or equal to ``Value 2``. Blender keyframes are not needed to enable show hiding animations. Since the range between Value 1 and 2 is inclusive, both a show and hide animation are necessary.
+
+	For example, suppose you have a dataref that is between 0 and 1 and you want to create an object that is shown between 0 and 1 and hidden after that. One would select that object, create a "Show" dataref animation with Value 1 as 0 and Value 2 as 1, and a "Hide" animation with Value 1 as 1 and Value 2 being 1 or higher.
+
+- "Transform" animations use Blender location and/or rotation keyframes to transform objects in space. Thusly, Blender animation keyframes on the selected object or armature are required before the following options are shown.
+
+#### Transform Dataref Animations
+Each frame on Blender's timeline is a place to add or remove a dataref keyframe. 
+
+``Add/Update an X-Plane Keyframe`` and ``Remove an X-Plane Keyframe`` - Each button, with the icon of a key and key with a red slash through it, add/update or remove X-Plane Dataref keyframes to an object. These keyframes are combined with the Blender's keyframes and exported as animation inside the OBJ.
+
+``Value`` - When the dataref is this value, X-Plane will have interpolated the animation to this frame. It is 0 by default, but that does not mean that is a valid number for all datarefs. You must look up documentation for each dataref and see which datatype are range of numbers it requires. Every time you change the value, you must also click the ``Add/Update an X-Plane Keyframe`` button before switching frames. Otherwise the value will not get saved.
+
+``Animation Loops Every`` - Looping allows you to create an animation that repeats, even when the dataref driving the animation is not a fixed set of values. One could think of it as "when the dataref has advanced by this much, loop the animation back to the beginning". Only one loop value is allowed per animation, on the last keyframe in an animation or shortly thereafter.
+
+If a dataref possible values are unbounded (increases infinitely) instead of in a range or set of values, it is still possible to get a repeating animation. When looping is not 0.00, use looping to still get repeating animation. , instead of **A float, incrementing by, .03, describing the amount of loops the animation will preform. 0.00 by default, making for 0% looping.** See [whatever] for more details.
 
 #### Show/Hide Animations
 Show/Hide has two values, where the object will be shown/hidden when the data is greater than or equal to ``Value 1`` and less than or equal to ``Value 2``. Datarefs that conflict about showing and hiding are not validated by the exporter.
