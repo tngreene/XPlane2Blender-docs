@@ -20,7 +20,7 @@
    * [FAQ](v3.3/faq.md)
 * [v3.4](v3.4/index.md)
    * [3.4 Installation](v3.4/34_instalation.md)
-   * [Quick Example](v3.4/settings_reference/34_quick_example.md)
+   * [Quick Example](v3.4/34_quick_example.md)
    * [Scene Settings](v3.4/settings_reference/34_scene_settings.md)
    * [Object Settings](v3.4/settings_reference/34_object_settings.md)
    * [Layer Settings](v3.4/settings_reference/34_layer_settings.md)
