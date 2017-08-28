@@ -18,7 +18,7 @@ Go to [the Blender home page](https://www.blender.org/download/) and download th
 
 ## Download and Install XPlane2Blender
 ### Automatic Installation
-1. Download XPlane2Blender's latest [version](version_url) and put it in a convient place
+1. Download XPlane2Blender's latest [version](version_url) and put it in a convenient place
 2. Launch Blender and open "User Preferences" (**File->User Preferences**)
 3. Select the "Add-ons" tab
 4. Click the button at the bottom that says "Install from File..."
