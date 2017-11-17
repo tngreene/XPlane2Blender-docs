@@ -26,6 +26,9 @@ Developer Blog Articles
 OBJ8 Spec Sections
 - [GEOMETRY_COMMANDS](https://developer.x-plane.com/?article=obj8-file-format-specification#GEOMETRY_COMMANDS)
 
+Forum Posts
+- [Parsed contents of lights.txt](https://forums.x-plane.org/index.php?/forums/topic/133677-parsed-contents-of-lightstxt/)
+
 lights.txt Comment Sections
 - Lines 12-18, 38-62, 76-97
 
