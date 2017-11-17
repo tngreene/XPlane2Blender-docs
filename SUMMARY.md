@@ -26,6 +26,7 @@
    * [Layer Settings](v3.4/settings_reference/34_layer_settings.md)
    * [Material Settings](v3.4/settings_reference/34_material_settings.md)
    * [Texture Settings](v3.4/settings_reference/34_texture_settings.md)
+   * [Lamp Settings](v3.4/settings_reference/34_lamp_settings.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
