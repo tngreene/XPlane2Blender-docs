@@ -47,7 +47,7 @@ Setting | Default | Description | Requires
 ``Dataref``|""|An optional dataref that will change the behavior of the light | ``Type`` must be "Custom"
 
 ## About lights.txt
-lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #.
+lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad or Word!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #.
 
 **Do not make changes to this file! It may break X-Plane or be erased with the next version of X-Plane.**
 
@@ -70,6 +70,6 @@ Though mostly undocumented, one can usually find the purpose of each light using
 - Light names are usually very descriptive
 - Comments nearby may explain their purpose
 - If it is a param light, the parameter names may be of help
-- Excluding lines that start with LIGHT_PARAM_DEF, if every option for the light name starts with BILLBOARD, the light is meant to be a billboard. If they all start with SPILL, the light is meant to be a spill light. If there is a mix, X-Plane can choose between them giving the artist more freedom
+- If a light name ends in "_sp" it usually means it's meant to be used as a pair with another light such as "taxi_g" and "taxi_g_sp" or "radio_const_bb" and "radio_const_sp"
 - If your file browser is sufficiently advanced, you can search for example uses of the light name in the text of existing .obj files in your X-Plane folder
 - If you find an OBJ with a light you're curious about, view it in X-Plane
