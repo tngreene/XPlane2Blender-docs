@@ -7,6 +7,8 @@ These "known" lights are listed in a file called "lights.txt", located in your X
 ### Lamp Type
 ``Type`` - XPlane2Blender uses this to tell if the artist wants a "Point" or non-"Point" (such as a "Spot") light. "Point" lights have no meaningful direction and are therefore used for things like car headlights and blinking runway lights. They're more optimizable than non-"Point" spotlights. A "Spot" type has a meaningful direction to it and are good for representing things like spotlights. Further mentions of ``Type`` will refer to XPlane2Blender's setting unless otherwise noted.
 
+``Color`` - Custom Lights and old style lights use this for their RGB value
+
 ## XPlane2Blender Settings
 ### X-Plane Light Types
 X-Plane's light ``Type`` refers to what type of information is required to use them.

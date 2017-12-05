@@ -11,10 +11,17 @@ During the export process, Blender data (meshes, animations, materials, etc) are
 	- Instanced Scenery Object: Like a scenery object, but is instance-able. Instancing is the ability for X-Plane draw more than one OBJ in a single stroke with the GPU. The less complicated the OBJ, the more likely it will pass for being instance-able. A massive performance booster for your model
 
 ## Textures
+``Autodetect Textures`` | On | Turns on or off autodetecting an OBJ's textures from Blender's material's texture slots. When unchecked, text fields will appear and you will be able to manually specify which textures should be used. **Beware: Some material and textures validations will be turned off!** In addition, Composite Normal-Textures will be ignored for this layer.|
 
 Setting | Default | Description | Requirement(s)
 ------- | ------- | ----------- | --------
-``Autodetect Textures`` | On | Turns on or off autodetecting an OBJ's textures from Blender's material's texture slots. When unchecked, text fields will appear and you will be able to manually specify which textures should be used. **Beware: Some material and textures validations will be turned off!** In addition, Composite Normal-Textures will be ignored for this layer.|
+``Default`` | "" | The file path to the daytime texture to be used for this object |
+``Night`` | "" | The file path to the night time texture to be used for this object|
+``Normal``| "" | The file path to the normal/specular map to be used for this object | For more details about what types of textures can be used in this slot, see [more info here].
+``Draped``| "" | The file path to the draped texture | Layer type must not be aircraft or Cockpit
+``Draped Normal``| "" | The file path to the draped normal texture | Layer type must not be aircraft or Cockpit
+
+Objs can still be exported, even if ``Autodetect Textures`` is turned off, and any of these file paths is left blank.
 
 ## Levels of Detail
 Setting | Default | Description | Requirement(s)

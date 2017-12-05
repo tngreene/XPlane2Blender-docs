@@ -36,12 +36,12 @@ See [materials] for more information.
 
 ## Advanced Settings
 ### Optimize
-**On by default**. A checkbox which turns on or off the remove duplicate vertices optimization. Removing duplicate verticies can increase performance in X-Plane, but may also increase export time. All OBJs will render the same regardless of optimization.
+**On by default**. A checkbox which turns on or off the remove duplicate vertices optimization. Removing duplicate vertices can increase performance in X-Plane, but may also increase export time. All OBJs will render the same regardless of optimization.
 
 ### Print Debug Info To Output, OBJ
-**On by default**. A checkbox which changes what debug information gets printed and where. During export, XPlane2Blender keeps a log of events, broken down into four catagories: *ERROR*, *WARNING*, *INFO*, and *SUCCESS*. *ERROR* and *WARNING* events are always printed, *INFO* and *SUCCESS* events statements are printed only when the checkbox is checked.
+**On by default**. A checkbox which changes what debug information gets printed and where. During export, XPlane2Blender keeps a log of events, broken down into four categories: *ERROR*, *WARNING*, *INFO*, and *SUCCESS*. *ERROR* and *WARNING* events are always printed, *INFO* and *SUCCESS* events statements are printed only when the checkbox is checked.
 
-Also, when this box is checked, information such as mesh names, verticies index numbers, and exporter version numbers are printed as comments in the .obj. They are invisible and meaningless to X-Plane, but extremely useful for humans reading or debugging them.
+Also, when this box is checked, information such as mesh names, vertices index numbers, and exporter version numbers are printed as comments in the .obj. They are invisible and meaningless to X-Plane, but extremely useful for humans reading or debugging them.
 
 ### Create Log File
 **Requires ``Print Debug Info To Output, OBJ`` turned on. Off by default**. A checkbox which indicates whether or not the internal log will also get saved to a text file ``xplane2blender.log``. It is located in the same directory as the saved .blend file. 

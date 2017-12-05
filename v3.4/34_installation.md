@@ -18,7 +18,7 @@ Go to [the Blender home page](https://www.blender.org/download/) and download th
 
 ## Download and Install XPlane2Blender
 ### Automatic Installation
-1. Download XPlane2Blender's latest [version](version_url) and put it in a convenient place
+1. Download XPlane2Blender. The safest choice (see "[What Version Do I Choose?](link)") is the latest **non pre-release** [version](https://github.com/der-On/XPlane2Blender/releases). Put it in a convenient place
 2. Launch Blender and open "User Preferences" (**File->User Preferences**)
 3. Select the "Add-ons" tab
 4. Click the button at the bottom that says "Install from File..."
@@ -35,7 +35,7 @@ It is typically located (or should be located) in the following places
 - Windows: ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\2.78\``
 - Linux: ``$HOME/.config/blender/2.78/``
 
-You can change the location of the scripts folder in User Preferences, however this could affect other addons. Proceed with caution.
+If it is not located in one of these places, you'll have to find it yourself. You can change the location of the scripts folder in User Preferences, however this could affect other addons. Proceed with caution.
 
 #### Official Blender Documentation
 - [Configuring Directories](https://docs.blender.org/manual/en/dev/getting_started/installing/configuration/directories.html)
@@ -47,12 +47,13 @@ From File->Preferences, a few settings I like to customize to make Blender easie
 - Input: Select with: pick left.
 
 ### Cleaning out the Startup Configuration
-Blender has a "Startup File". It is loaded everytime you slect "New File". Since X-Plane has its own camera, and lighting systems you may find it to be a time saver to remove them from the default.
+Blender has a "Startup File". It is loaded everytime you select "New File". Since X-Plane has its own camera, and lighting systems you may find it to be a time saver to remove them from the default.
 
 1. For each item in the scene, right-click it in the outliner and pick "delete".
 2. Pick File -> Save Startup File (or press Ctrl + U)
 
 A tiny popup menu will appear under your mouse that says:
+
 ``
 (?) Ok?
 --------------------------
@@ -65,17 +66,6 @@ Save Startup File CTRL + U
 This kind of "menu-based confirm" is heavily used in Blender.  It can be tricky to get used to at first, but can actually be very fast and natural.
 
 ### Customizing the Screen
-Blender has a huge number of screens and lots of options to customize how the screen is organized.
-
-Blender's default layout is good for general modeling, but I'm not a fan of the default UV editing view.  Here'es how to customize the view for texturing:
-1. Start Blender
-2. If you are not already in the "default" screen layout, pick that
-3. Click the + sign next to the screen layout menu.  A new item Default.001 appears
-4. Rename it to "texturing"
-5. Put the mouse over the divide between the 3-d window and the main menu bar.  A horizontal pair of arrows will appear
-6. Right click and pick "split area" - a vertical line appears. 
-7. Move the mouse to put the line about at the midpoint of the main window and click
-8. There are now two main editing areas
-9. In the lower left corner of the right side window there is an icon with a cube and up-and-down arrows.  Pick it and select "UV/image editor
-10. Put the main screen layout back to default
-11. Pick File->save user startup file to save this change for future documents
+An important part of an efficient workflow is customing your screen layout. You can read more about it on Blender's manual
+- [Screens Overview](https://docs.blender.org/manual/en/dev/interface/window_system/screens.html) 
+- [Area Splitting and Resizing](https://docs.blender.org/manual/en/dev/interface/window_system/areas.html)
