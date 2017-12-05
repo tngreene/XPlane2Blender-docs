@@ -1,4 +1,4 @@
-# Layers Settings
+# Layer Settings
 During the export process, Blender data (meshes, animations, materials, etc) are combined with X-Plane Layers and turned into .OBJs. Depending on your export mode defined in the [scene settings](mkdownhere), the layer settings will appear in the Blender Properties Pane's Scene tab, or in selected root Object's Object's pane. All options are the same, regardless of export mode and where they appear in the UI. The only difference you may see is that in Layers mode, an X-Plane Layer settings section will have a header of Layer #, and in Root Objects mode will simply have the header of "Root Objects". This is purely cosmetic.
 
 ## Basic Settings
@@ -74,4 +74,4 @@ Export Path Directives are unofficial OBJ directives that an internal Laminar Re
 When the button ``Add Export Path Directive`` is pressed, a new Export Path directive slot is added. When the x-mark on the directive is clicked, it is removed. Empty export path directives are skipped.
 
 ## Custom Properties
-Custom properties are a key value pair, which get written directly to the header of the OBJ file, completely without validation. Some use this for 3rd party plug-ins or tooling or to gain access to new OBJ features that are not yet built into the exporter. For the latter case, this is NOT recommended and should be depricated as soon as the exporter supports the OBJ directive! Without rigerous, spec compliant, and tested validation OBJs could become invalid or slow.
+Custom properties are a key value pair, which get written directly to the header of the OBJ file, completely without validation. Some use this for 3rd party plug-ins or tooling or to gain access to new OBJ features that are not yet built into the exporter. For the latter case, this is NOT recommended and should be deprecated as soon as the exporter supports the OBJ directive! Without rigorous, spec compliant, and tested validation OBJs could become invalid or slow.
