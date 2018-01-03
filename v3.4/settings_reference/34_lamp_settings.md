@@ -47,6 +47,8 @@ Setting | Default | Description | Requires
 ``Size``| 1.00    | The size of the custom light, the large the bigger. It isn't in meters or feet, it must be experimented with | ``Type`` must be "Custom"
 ``Texture Coordinates``| (0.0,0.0,1.0,1.0)| An area of the OBJ's texture where the texture for the light is, specified as a fraction of the textures image between 0.0 and 1.0. The numbers represent the left, top, right, and bottom, respectively | ``Type`` must be "Custom"
 ``Dataref``|""|An optional dataref that will change the behavior of the light | ``Type`` must be "Custom"
+``Enable RGB Override``| Off | When enabled, RGB Override Values will be used instead of the Blender color picker. Useful for certain datarefs| ``Type`` must be "Custom"
+``RGB Override Values``| (0.0,0.0,0.0) | The values that will be used instead of the RGB picker | ``Enable RGB Override`` must be on
 
 ## About lights.txt
 lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad or Word!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #.
