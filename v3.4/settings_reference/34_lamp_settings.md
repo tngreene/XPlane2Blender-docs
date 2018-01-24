@@ -83,7 +83,7 @@ Though mostly undocumented, one can usually find the purpose of each light using
 - Though the first column is meaningless in terms of artistic and authoring decisions, it could give clues as to it's use. For instance, if a light name only has BILLBOARD types associated with it, one can safely guess that the light will be a billboard. "SPILL_HW_FLA" lights such as "heli_morse_beacon" will **FLA**sh at an interval
 - If your file browser is sufficiently advanced, you can search for example uses of the light name in the text of existing .obj files in your X-Plane folder
 
-### SPILL\_..., BILLBOARD\_..., and other first column prefixes
+### SPILL..., BILLBOARD..., and other first column prefixes
 The first column of each uncommented line of the light.txt is a defined light type. Each light name can have multiple types, and X-Plane will choose between them automatically. For instance, "taillight" includes 2 types for X-Plane to choose from: 
 
     BILLBOARD_HW    taillight...
