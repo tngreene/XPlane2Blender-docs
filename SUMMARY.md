@@ -28,6 +28,8 @@
    * [Material Settings](v3.4/settings_reference/34_material_settings.md)
    * [Texture Settings](v3.4/settings_reference/34_texture_settings.md)
    * [Lamp Settings](v3.4/settings_reference/34_lamp_settings.md)
+   * [In Depth Articles](v3.4/indepth/34_indepth.md)
+        * [Aiming Special Non WYSIWYG Lights](v3.4/indepth/aiming_special_non_wysiwyg_lights.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
