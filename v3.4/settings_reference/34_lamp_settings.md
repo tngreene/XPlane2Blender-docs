@@ -41,6 +41,9 @@ Setting | Default | Description | Requires
 ``Name``| ""      | The name of the light. It should match a "known" Laminar Research light| ``Type`` must be "Named" or "Param"|
 ``Params``|""     | The numerical parameters for the parameterized light, separated by 1 or more spaces. Comments should start with a "#" or "//" | ``Type`` must be "Param"
 
+#### Light Name Vs Named Light
+"Light Name" refers to the name of a pre-made light, such as "taxi_b" or "airplane_nav_left_size", see the setting ``Name`` above for more details. "Named Light" refers to the type of XPlane2Blender light which takes a light name and no parameters.
+
 ### Custom Light Settings
 Setting | Default | Description | Requires
 ------- | ------- | ----------- | --------
@@ -51,17 +54,17 @@ Setting | Default | Description | Requires
 ``RGB Override Values``| (0.0,0.0,0.0) | The values that will be used instead of the RGB picker | ``Enable RGB Override`` must be on
 
 ## About lights.txt
-lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad or Word!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #.
+lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad or Word!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #. It is located inside the addon folder, ``io_xplane2blender\resources\lights.txt``. It can be replaced by the lights.txt file included in X-Plane.
 
-**Do not make changes to this file! It may break X-Plane or be erased with the next version of X-Plane.**
+**Do not make changes to this file! Changes may be incompatible with X-Plane and may, at best, make your object export incorrectly or, at worst, crash X-Plane!**
 
 The vast majority of this file is not relevant and may be misleading. The most important column is the second one: the light name. Multiple lines with the same light name represent different light drawing styles X-Plane can choose from, not different lights with the same name.
 
 ### Anatomy of Param Lights
-``
-1.                  2.                          3.  4.
-LIGHT_PARAM_DEF     appron_light_billboard      5   X Y Z W S
-``
+
+    1.                  2.                          3.  4.
+    LIGHT_PARAM_DEF     appron_light_billboard      5   X Y Z W S
+
 1. "LIGHT_PARAM_DEF" declares that the following is a description of a parameterized light 
 2. The light name
 3. The number of parameters, meaningless to an artist
@@ -69,11 +72,21 @@ LIGHT_PARAM_DEF     appron_light_billboard      5   X Y Z W S
 
 Any light that doesn't have an associated LIGHT_PARAM_DEF is known simply as a "Named Light".
 
-### Hints For Finding Light Use
+### Hints For Finding A Light's Use
 Though mostly undocumented, one can usually find the purpose of each light using some of these tips
+- Experiment! Make a scenery object with lots of lights and view it in X-Plane!
 - Light names are usually very descriptive
 - Comments nearby may explain their purpose
-- If it is a param light, the parameter names may be of help
+- If a light name ends in "_bb" it usually means it is meant to be used with a billboard light. Look for a corresponding "_sp", such as "helipad_flood_bb" and "helipad_flood_sp"
 - If a light name ends in "_sp" it usually means it's meant to be used as a pair with another light such as "taxi_g" and "taxi_g_sp" or "radio_const_bb" and "radio_const_sp"
+- If it is a param light, the parameter names may be of help
+- Though the first column is meaningless in terms of artistic and authoring decisions, it could give clues as to it's use. For instance, if a light name only has BILLBOARD types associated with it, one can safely guess that the light will be a billboard. "SPILL_HW_FLA" lights such as "heli_morse_beacon" will **FLA**sh at an interval
 - If your file browser is sufficiently advanced, you can search for example uses of the light name in the text of existing .obj files in your X-Plane folder
-- If you find an OBJ with a light you're curious about, view it in X-Plane
+
+### SPILL_..., BILLBOARD_..., and other first column prefixes
+The first column of each uncommented line of the light.txt is a defined light type. Each light name can have multiple types, and X-Plane will choose between them automatically. For instance, "taillight" includes 2 types for X-Plane to choose from: 
+
+    BILLBOARD_HW    taillight...
+    SPILL_HW_DIR    taillight...
+
+**This information is only used by X-Plane and should not influence your decisions about whether to use Point or Spot lamps.** The differences between SPILL_HW_DR, SPILL_SW, and etc have no impact on your work. For the overly curious, it is documented at the top of the file.
