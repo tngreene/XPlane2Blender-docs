@@ -1,6 +1,6 @@
 # Aiming Special Non-WYSIWYG Lights
 
-In XPlane2Blender 3.4, a certain type of "WYSIWYG" light was added:
+As mentioned in the [Lamp Settings](../settings_reference/34_lamp_settings.md), in XPlane2Blender 3.4, a certain type of "WYSIWYG" light was added:
 
 > If the Lamp is a "Spot" (or other non-"Point") lamp **and** a "Named" or "Param" type **and** the light name is included in the ``lights.txt`` file:
 > - XPlane2Blender will export the Lamp's rotation with What-You-See-Is-What-You-Get behavior

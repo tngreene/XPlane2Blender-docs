@@ -53,6 +53,13 @@ Setting | Default | Description | Requires
 ``Enable RGB Override``| Off | When enabled, RGB Override Values will be used instead of the Blender color picker. Useful for certain datarefs| ``Type`` must be "Custom"
 ``RGB Override Values``| (0.0,0.0,0.0) | The values that will be used instead of the RGB picker | ``Enable RGB Override`` must be on
 
+## WYSIWYG Spot Lights
+Most spot lights can be aimed directly, without animation. Simply rotate the light and it will appear in X-Plane as so! The exporter will use the lamp's rotation, even if a param list includes X, Y, Z or DX, DY, DZ components. (The param list must still be valid.)
+
+This What-You-See-Is-What-You-Get behavior will be activated **if the Lamp is a "Spot" (or other non-"Point") lamp *and* a "Named" or "Param" type *and* the light name is included in the ``lights.txt`` file.**
+
+Lights that do not meet the above requirements can be aimed with the "Useless Keyframe" trick, found in [Aiming Special Non-WYSIWYG Lights](../indepth/aiming_special_non_wysiwyg_lights.md). **It is unnecessary in almost all cases.**
+
 ## About lights.txt
 lights.txt is essentially a massive table of information for X-Plane defining lights to be used in the sim. An artist only needs to be concerned with an extremely small portion of it. To read it, you'll need a good text editor (not Notepad or Word!) that can handle different line endings and has an adjustable tabstop (8 seems to work). Comments are prefixed with a #. It is located inside the addon folder, ``io_xplane2blender\resources\lights.txt``. It can be replaced by the lights.txt file included in X-Plane.
 
