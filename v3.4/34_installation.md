@@ -32,8 +32,8 @@ You can manually install XPlane2Blender by dragging that unzipped ``io_xplane2bl
 
 It is typically located (or should be located) in the following places
 - macOS: ``/Users/$USER/Library/Application Support/Blender/2.78/scripts/addons``
-- Windows: ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\2.78\``
-- Linux: ``$HOME/.config/blender/2.78/``
+- Windows: ``%USERPROFILE%\AppData\Roaming\Blender Foundation\Blender\2.78\scripts\addons``
+- Linux: ``$HOME/.config/blender/2.78/scripts/addons``
 
 If it is not located in one of these places, you'll have to find it yourself. You can change the location of the scripts folder in User Preferences, however this could affect other addons. Proceed with caution.
 
