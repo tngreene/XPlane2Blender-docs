@@ -4,6 +4,9 @@ XPlane2Blender's material model is different from Blender's. In XPlane2Blender, 
 Due to some inconveniences of Blender's data model, some UI elements will be shown even if using them would result in an invalid OBJ or would have no affect.
 
 ## Relevant Blender Settings
+### Link
+``Link`` - The data-model linkage of the material **must be set to "Data"**. If you have materials that are linked by "Object", it is recommended to remove them to keep things neat
+
 ### Specular
 Setting | Default | Description | Requirement(s)
 ------- | ------- | ----------- | --------

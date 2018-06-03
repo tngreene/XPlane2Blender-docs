@@ -3,7 +3,7 @@ To access, navigate to Blender's Properties Pane and click on the Scene Icon [ic
 
 ## Basic Settings
 ### Export Objs Button
-Pressing this button will export the .blend file and save the exported .obj files relative to it. **There is no differnce between this export and the one in File->Export->X-Plane Object (.obj)**.
+This button will export the .blend file and save the exported .obj files relative to it. **The only difference between using this button and using the File->Export->X-Plane Object (.obj) menu option is that the menu option gives you an export dialog box to choose your export destination. Exported Objs will be the same using either method.**
 
 ### X-Plane Version
 **Latest released version of X-Plane by default.** A drop down menu with versions of X-Plane to target. The behavior of the plugin, and contents of exported OBJs may changed based on it. In addition, certain parts of the UI may only be shown under certain versions. For instance, "Blend Glass" will only appear as a Blend option when the X-Plane Version is set to ``11.0x`` or higher.
@@ -27,7 +27,7 @@ In "Root Object" mode, Blender Object's parent-child relationships are used to e
 A root object cannot contain a root object.
 
 ##### Example Workflow
-An example use of this workflow is an airplane with many parts. An airplane may have more than 20 parts, and much of them are nestled together making it hard to work on the model without hiding many parts of it. It would be very annoying to have to continually enable and disable the Blender Object Visibility Layers to make each component export which, fortunately, is not necissary in "Root Object" mode. You are free to use that feature of Blender however you wish.
+An example use of this workflow is an airplane with many parts. An airplane may have more than 20 parts, and much of them are nestled together making it hard to work on the model without hiding many parts of it. It would be very annoying to have to continually enable and disable the Blender Object Visibility Layers to make each component export which, fortunately, is not necessary in "Root Object" mode. You are free to use that feature of Blender however you wish.
 
 ### Compile Normal-Textures
 **Shown always, only affects layers where ``Autodetect Textures`` is on. On by default**. A checkbox which turns on or off the compiling of normal textures from existing normal and/or specular textures as needed. Given a detected normal texture, specular texture, or both, XPlane2Blender will create a combined image and save it to disk (with the suffix "_nm", "_nm_spec", or "_spec" depending on what was used in the generated file). This will be referenced in the OBJ as a replacement for the regular normal or draped normal file.

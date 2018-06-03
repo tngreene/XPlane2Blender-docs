@@ -11,6 +11,8 @@ During the export process, Blender data (meshes, animations, materials, etc) are
 	- Instanced Scenery Object: Like a scenery object, but is instance-able. Instancing is the ability for X-Plane draw more than one OBJ in a single stroke with the GPU. The less complicated the OBJ, the more likely it will pass for being instance-able. A massive performance booster for your model
 
 ## Textures
+X-Plane textures must be a .dds or .png file. Blender supports both. A .png will surfice for most applications. See [Texture Settings](./34_texture_settings.md) for more information.
+
 ``Autodetect Textures`` | On | Turns on or off autodetecting an OBJ's textures from Blender's material's texture slots. When unchecked, text fields will appear and you will be able to manually specify which textures should be used. **Beware: Some material and textures validations will be turned off!** In addition, Composite Normal-Textures will be ignored for this layer.|
 
 Setting | Default | Description | Requirement(s)
