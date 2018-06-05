@@ -32,6 +32,6 @@
     * [Aiming Special Non-WYSIWYG Lights](v3.4/indepth/aiming_special_non_wysiwyg_lights.md)
 * [v3.5](v3.5/index.md)
   * [In Depth Articles](v3.5/indepth/35_indepth.md)
-    * [Animation Requirments For Smart VR Manipulators](v3.5/indepth/animation_requirements_smart_manipulators.md.md)
+    * [Animation Requirments For Smart VR Manipulators](v3.5/indepth/animation_requirements_smart_manipulators.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
