@@ -24,13 +24,15 @@ Setting | Default | Description | Requirement(s)
 ``Blend`` |"Alpha Blend"|Controls how texture's alpha channels are blended with each other. See the **Blend Mode Options Table** for more details| 
 ``Alpha Cutoff Ratio`` | 0.5 | For this material's textures, alpha levels below the ``Alpha Cutoff Ratio`` are rendered as fully transparent. Alpha levels above the level are fully opaque. Values can range from 0.00 to 1.00 | ``Blend`` must be set to "Alpha Cutoff"
 
-#### Blend Mode Options
+### Blend Mode Options
 Blend Mode | Description | Requirement(s)
 ---------- | ----------- | --------
-"Blend Glass"|The alpha channel of the albedo (day texture) will be used to create translucent rendering|``Export Version`` is at least "11.0x"
 "Blend Shadow"|In shadow mode, shadows are not blended but primary drawing is|
 "Alpha Cutoff"|Textures alpha channel will be used to cutoff areas above the Alpha Cutoff Ratio|
 "Alpha Blend"|Textures alpha channel will blended|
+
+### Blend Glass
+The alpha channel of the albedo (day texture) will be used to create translucent rendering. ``Export Version`` must be at least "11.0x"
 
 ### Surface Behavior
 Surface Behavior settings control how this material interacts with X-Plane in non-visual ways.

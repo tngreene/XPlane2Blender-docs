@@ -15,7 +15,10 @@ These manipulators use animation data to autodetect properties such as ``X``, ``
 
 ## Further Reading
 Manual Pages
-[Object Settings](../../v3.4/settings_reference/34_object_settings.md)
+- [Object Settings](../../v3.4/settings_reference/34_object_settings.md)
+
+Developer Blog Posts
+- [All About Clamping Animations](http://developer.x-plane.com/article/all-about-clamping-animations/)
 
 Manipulators
 - [Manipulators In-depth](../../v3.4/indepth/manipulator_recipes.md)
@@ -25,8 +28,7 @@ VR
 - [Manipulators and VR Part 1: From Mouse to Mechanism](https://developer.x-plane.com/2018/01/manipulators-and-vr-part-1-from-mouse-to-mechanism/)
 
 Example Blend Files
-- [example_vr_manipulator_types.zip](./content/example_vr_manipulator_types.zip)
-This zip of blend files contains a variety of examples of working and not working smart manipulators, taken from the XPlane2Blender test suite. Don't get the wrong idea, these are only some (simple) use cases of the feature.
+- [example_vr_manipulator_types.zip](./content/example_vr_manipulator_types.zip) This zip of blend files contains a variety of examples of working and not working smart manipulators, taken from the XPlane2Blender test suite. The last layer in each .blend file contains a correct working example. The rest are all the different ways you could get an error. Don't get the wrong idea, these are only some (simple) use cases of the feature.
 
 ## About "Animation Sources"
 The autodetection algorithm requires a certain number of animation sources, of certain types, in a certain order. The algorithm continues looking for animation sources until it fills its requirements, starting at the manipulator's mesh and then inspecting up its parents. This provides flexibility. Animations can appear anywhere in this chain from, including having gaps between and not having the manipulator mesh be the first animation source.
