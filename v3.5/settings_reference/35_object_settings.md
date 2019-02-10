@@ -60,7 +60,7 @@ If a dataref possible values are unbounded (increases infinitely) instead of in 
 Show/Hide has two values, where the object will be shown/hidden when the data is greater than or equal to ``Value 1`` and less than or equal to ``Value 2``. Datarefs that conflict about showing and hiding are not validated by the exporter.
 
 #### Export Animation In Layers
-```Export Animation In Layers`` - **An array of checkboxes, mirroring Blender's Object Layer visibility, all enabled by default. Only available in [Layers Mode](mkdown).** If a layer checkbox is disabled, then only the Blender Object's mesh will be exported in the layer, but **not** any of it's animations.
+``Export Animation In Layers`` - **An array of checkboxes, mirroring Blender's Object Layer visibility, all enabled by default. Only available in [Layers Mode](mkdown).** If a layer checkbox is disabled, then only the Blender Object's mesh will be exported in the layer, but **not** any of it's animations.
 
 ### Manipulator Settings
 
@@ -75,7 +75,7 @@ The default, clicking on an object does nothing. Non-cockpit objects always have
 
 ##### Panel Click
 Includes 
-	- 
+	
 ``Requires object with panel texture or panel texture region.`` A click on the object is mapped through to the 2-D panel based on the panel texture's mapping.
 
 ##### Drag-Axis
