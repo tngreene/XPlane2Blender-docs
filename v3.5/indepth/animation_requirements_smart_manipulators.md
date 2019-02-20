@@ -73,6 +73,7 @@ Drag Axis With Detents:
 
 * Must have a parent with a valid location animation source
 * The detent axis must be at 90 degrees from the drag axis
+* Must have [Axis Detent Ranges](./axis_detent_range.md)
 
 Drag Rotate With Detents:
 
