@@ -79,7 +79,7 @@ Drag Rotate With Detents:
 * Must have a parent with a valid location animation source
 * The detent axis must not be along the rotational axis in any way. To understand why, imagine a wheel that has been welded onto an axle. The axle is along the X axis, therefore the wheel rotates around the X axis. When X-Plane simulates how a mouse drag or VR drag rotates this object, it only calculates how the wheel could possibly move. Therefore any dragging along the X axis is ignored and no detenting in that direction is possible
 * Must have exactly two non-clamping Location keyframes and **no** Rotation keyframes
-* Must have [Axis Detent Ranges](./axis_detent_range.md)
+* Must have [Axis Detent Ranges](/./creating-axis-detent-ranges.html)
 
 ### Drag Rotate Regions
 
