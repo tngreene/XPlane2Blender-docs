@@ -36,6 +36,7 @@
   * [Object Settings](v3.5/settings_reference/35_object_settings.md)
   * [In Depth Articles](v3.5/indepth/35_indepth.md)
     * [Animation Requirments For Smart VR Manipulators](v3.5/indepth/animation_requirements_smart_manipulators.md)
+    * [Creating Axis Detent Ranges](creating-axis-detent-ranges.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
