@@ -36,9 +36,9 @@ Here is a rough chart showing our throttle quadrant from the example file.
 
 ![](/assets/axis_detent_ranges_in_charts.png "Graphics showing the relationship between the mesh, animations, and ranges")
 
-**The tiny thin line for the range **`.75, .75, 0`** is showing where the pit it. The 1 pixel of whitespace is for illustrative purposes only.**
+**The tiny thin line for the range **`.75, .75, 0`** is showing where the pit is. The 1 pixel of whitespace is for illustrative purposes only, it has no real width.**
 
-As you can see, because the Blender Animations, X-Plane Dataref Keyframes, and Axis Detent Ranges are all enforced to be synchronized, the graph minimum heights reflects the real object, whether you're looking at Datarefs or Blender Animations! This is no coincidence! \(Unfortunately you'll have to use your imagination for the OBJ as the model is a plain cylinder and rectangular cube.\)
+As you can see, because the Blender Animations, X-Plane Dataref Keyframes, and Axis Detent Ranges are all enforced to be synchronized, the graphs of minimum heights reflects the real object, whether you're looking at Datarefs or Blender Animations! This is no coincidence! \(Unfortunately you'll have to use your imagination for the OBJ as the model is a plain cylinder and rectangular stick.\)
 
 Once you understand the concept, the rules for what is a valid Axis Detent Ranges table will hopefully be very straight forward.
 
@@ -46,18 +46,14 @@ Once you understand the concept, the rules for what is a valid Axis Detent Range
 
 ## General Rules {#general-rules}
 
-Some rules may not be applicable or may seem pedantic if you only have one range, but it is allowed!
+Some rules may not be applicable or may seem pedantic if you only have one range, but one range is allowed!
 
 * Axis Detent Ranges are only available for Detent related manipulators
 * Manipulators with detents must have 1 or more Axis Detent Ranges
 * The smart manipulator itself must be valid before Axis Detent Ranges will be checked
-* The Dataref Keyframes have only one requirement: the minimum value must be less than the maximum. The whole range of values as defined in DataRefs.txt or a custom plugin do not need to be used. For example: 
-  `sim/cockpit2/engine/actuators/throttle_ratio_all`
-   real range is 0.0 to 1.0, but we can animate and use only `0.25` to `0.75` or `0.0` to `0.9` as in the example.
+* The Dataref Keyframes have only one requirement: the minimum value must be less than the maximum. The whole range of values as defined in DataRefs.txt or a custom plugin do not need to be used. For example: `sim/cockpit2/engine/actuators/throttle_ratio_all h`has a real range is 0.0 to 1.0, but we can animate and use only `0.25` to `0.75` or `0.0` to `0.9` as in the example
 
 ## Range Start And End Rules {#range-start-and-end-rules}
-
-Start and End refer to the start and end of a sub range of Dataref 1.
 
 * A range's start must be **less than or equal** to its end
 * The start of the **1st** Axis Detent Range must be Dataref 1's minimum, the end of the **last** Axis Detent Range must be Dataref 1's maximum. Every other range's start must be the end of another
@@ -68,12 +64,12 @@ With these rules, the starts and ends of the Axis Detent Ranges table covers the
 
 * The maximum height is determined by the distanced traveled in the Detent Animation
 * Values for Height must be between 0 and maximum height
-* The Detent Dataref range must not start or end with a negative number.
+* The Detent Dataref range must not start or end with a negative number
 
 ## Stop Pits {#stop-pits}
 
 * A stop pit is defined as a Range who's start and end are the same, giving it a width of 0. Its height must be less than each of it's neighbors, though 0 is commonly used
-* A pit can be the first or last detent range, but never the only one
+* A pit can be the first or last detent range, but never the only range
 * Stop **pegs**, where height is equal to or greater than it's neighbor's height, are never allowed
 
 
