@@ -30,7 +30,7 @@ These are made with X-Plane Keyframes. Their minimum and maximum do not have to 
 
 With Axis Detent Ranges you are able to simulate a range of cockpit controls like never before!
 
-**Download a complete and working Throttle Quadrant With Detents example: **[AxisDetentRangeTutorial](https://github.com/der-On/XPlane2Blender/files/2886941/axis_detent_range_tutorial.zip)
+**Follow along with a working Throttle Quadrant With Detents example: **[axis\_detent_\__range\_tutorial.zip](https://github.com/der-On/XPlane2Blender/files/2886941/axis_detent_range_tutorial.zip)
 
 Here is a rough chart showing our throttle quadrant from the example file.
 
