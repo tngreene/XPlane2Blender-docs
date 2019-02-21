@@ -18,6 +18,7 @@ These manipulators use animation data to autodetect properties such as `X`, `Y`,
 Manual Pages
 
 * [Object Settings](../../v3.4/settings_reference/34_object_settings.md)
+* [Creating Axis Detent Ranges](https://der-on.gitbooks.io/xplane2blender-docs/content/creating-axis-detent-ranges.html)
 
 Developer Blog Posts
 
