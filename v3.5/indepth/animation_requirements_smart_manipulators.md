@@ -82,7 +82,7 @@ Drag Rotate With Detents:
 * Must have exactly two non-clamping Location keyframes and **no** Rotation keyframes
 * Must have [Axis Detent Ranges](https://der-on.gitbooks.io/xplane2blender-docs/content/creating-axis-detent-ranges.html)
 
-For Drag Axis With Detents, the path for Drag Axis can be manually set by turning off "Autodetect Datarefs". It will, however, still use the Location Animation's dataref values. The same applies for Drag Rotate with Detents: The Rotation Axis Dataref and Detent Axis Dataref path can be manually changed, but the dataref values will still be taken from the Location and Rotation Animation.
+For Drag Axis With Detents, the path for Drag Axis can be manually set by turning off "Autodetect Datarefs". It will, however, still use the Location Animation's dataref values. The same applies for Drag Rotate with Detents: the Rotation Axis Dataref and Detent Axis Dataref path can be manually changed, but the dataref values will still be taken from the Location and Rotation Animation.
 
 ### Drag Rotate Regions
 
