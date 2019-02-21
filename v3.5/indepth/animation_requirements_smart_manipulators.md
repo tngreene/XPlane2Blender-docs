@@ -82,6 +82,8 @@ Drag Rotate With Detents:
 * Must have exactly two non-clamping Location keyframes and **no** Rotation keyframes
 * Must have [Axis Detent Ranges](https://der-on.gitbooks.io/xplane2blender-docs/content/creating-axis-detent-ranges.html)
 
+For Drag Axis With Detents, the path for Drag Axis can be manually set by turning off "Autodetect Datarefs". It will, however, still use the Location Animation's dataref values. The same applies for Drag Rotate with Detents: The Rotation Axis Dataref and Detent Axis Dataref path can be manually changed, but the dataref values will still be taken from the Location and Rotation Animation.
+
 ### Drag Rotate Regions
 
 By adding additional rotation and dataref keyframes between the start and end of a `Drag Rotate` or `Drag Rotate With Detents`' rotation animation source \(see above\), X-Plane will automatically adjust how long it takes to drag through those areas. In general, a large range will be slower to drag through, and a small range will be faster to drag through. Manipulators requiring precise changes can be greatly improved by using this feature. In addition, uninteresting portions of a manipulator's range can be made to be dragged through quickly with Drag Rotate regions.
