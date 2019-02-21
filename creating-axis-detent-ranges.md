@@ -34,9 +34,7 @@ With Axis Detent Ranges you are able to simulate a range of cockpit controls lik
 
 Here is a rough chart showing our throttle quadrant from the example file.
 
-![](/assets/axis_detent_ranges_in_charts.png "Graphics showing the relationship between the mesh, animations, and ranges")
-
-**The tiny thin line for the range **`.75, .75, 0`** is showing where the pit is. The 1 pixel of whitespace is for illustrative purposes only, it has no real width.**
+![](/assets/axis_detent_ranges_in_charts.png "Graphics showing the relationship between the mesh, animations, and ranges")**The tiny thin line for the range **`.75, .75, 0`** is showing where the pit is. The 1 pixel of whitespace is for illustrative purposes only, it has no real width.**
 
 As you can see, because the Blender Animations, X-Plane Dataref Keyframes, and Axis Detent Ranges are all enforced to be synchronized, the graphs of minimum heights reflects the real object, whether you're looking at Datarefs or Blender Animations! This is no coincidence! \(Unfortunately you'll have to use your imagination for the OBJ as the model is a plain cylinder and rectangular stick.\)
 
