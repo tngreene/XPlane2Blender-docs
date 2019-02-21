@@ -20,12 +20,12 @@ These are made with X-Plane Keyframes. Their minimum and maximum do not have to 
 
 | Concept | Definition |
 | :--- | :--- |
-| Maximum Drag Height | The maximum a detent stick can move from its origin \(in meters\) |
+| Maximum Drag Height | The maximum a detent stick can move from its origin, taken from the Location Animation |
 | Axis Detent Range | A way of specifying the minimum height the manipulator must be at to move into the next section |
 | Range Start and End | Defines the sub-range of Dataref 1 this range covers, its ends are inclusive |
-| Range Height | The height of this section, between 0 and the maximum drag height |
+| Range Height | The height of this section, between 0 and the Maximum Drag Height |
 | Axis Detent Ranges table | All Axis Detent Ranges for this manipulator, with one or more ranges |
-| Plateaus and Valleys | Using ranges, you can make a description of the physical device you are simulating. This looks like a 2D cross section of "terrain", plateaus and valleys to move along and over. |
+| Plateaus and Valleys | Using ranges, you can describe the "terrain" of the device for X-Plane to simulate. You can imagine this detent terrain as plateaus and valleys to move along and over |
 | Pits | A range whose start and end are equal, and whose height is less than both its neighbors traps a user who is sliding the control instead of lifting it - without creating a real valley of any width |
 
 With Axis Detent Ranges you are able to simulate a range of cockpit controls like never before!
