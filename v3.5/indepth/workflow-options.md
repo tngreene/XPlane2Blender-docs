@@ -4,63 +4,67 @@ XPlane2Blender has a variety of tools to allow you to work in the way that is be
 
 ## Layers Or Root Objects Mode?
 
-1. Layers mode uses Blender's 3D View layers to seperate OBJs. Therefore, a .blend file using layers mode can produce up to 20 OBJs. Great for scenery artists.
-2. Root Objects mode uses Empty objects and a tree of parent-child relationships. With this, you can still Empties marked as "Root Object" Use Root Object mode and create any number of OBJs by specifying Root Objects and giving them children. Great for planes, since planes have complicated intricate parts that benifit from layering and show/hiding. LOD in root object mod
+1. Layers mode uses Blender's 3D View visible layers to seperate OBJs. Any object and its children in a layer that is being exported into an OBJ will be collected\*. Therefore, a .blend file using Layers Mode can produce up to 20 OBJs per scene. An Object's LOD buckets are chosen by checkboxes in the Object's property tab. Since each layer must contain all the Blender Objects that will go into that OBJ, simple scenery objects fit nicely in it. Layers mode's checkbox style of specifying LODs is much more flexible than in Root Objects mode
+2. Root Objects mode uses marked Objects and \*all the children \(and their nested children\) to make an OBJ. You can create any number of OBJs per file by using any number of Root Empty Objects. Objects can be put into different 3D View Layers, however there are additional rules when using LODs. The ability to use 3D View layers independently of producing OBJs is favored by Airplane aritsts making complex cockpits
 
-## What about LODs?
+Layers Mode and Root Objects Mode support all the same features and it is easy to switch modes later on. The only difference is your preference of workflow.
 
-Layers mode uses checkboxes to assaign objects into buckets, Root Object mode uses their presence in Layer 1, 2, 3, 4 to specify what an object should be, which can be constricting.
-
-# What about organizing my datablocks?
-
-* Use Datablocks like Armatures and Empties to organize things in the outliner tree. You can use bone parent or Armature datablock parent.
-* Use the 1 Scene = 1 Obj pattern
-* Use the "each scene is 1 OBJ"
-
-What about the relationship between OBJ files the .blend file?
-
-* Generally, people like 1 .blend file = 1 airplane or 1 .blend file equals 1 scenery asset.
-
-## I want to organize my stuff... \(combine as much as you'd like for greater fun and headaches!\)
-
-1. Use multiple .blend files, linking and appending as needed
-2. Use one .blend file full of DataBlocks, with single or multiple users
-3. Use Empties to group things into hierarchies
-4. Use Armatures to group things into hierarchies
-5. Use Meshes or Lights to group things into hierarchies! \(Why would you do this though?\)
-6. Sort DataBlocks into different layers. You can selectively export layers in Layers Mode. Remember in Root Objects Mode Layers 1, 2, 3, and 4 can have a special meaning.
-7. Use Scene datablock for even greater separation of concerns
-8. You can have each Scene make 1 or more OBJs!
-9. You can have multiple scenes in a .blend file each choosing their own Export Mode!
-
-With all of this you can have such semantics for your project as
-
-> "One .blend file means one OBJ"
-
-> "One layer means one OBJ"
-
-> "One Root Object means one OBJ"
-
-> "Each Scene in the .blend file means one OBJ"
-
-> "Certain Scenes represent OBJs, others just represent organization"
-
-and more!
-
-## I want convenient ways to options to run the exporter to export all of my OBJs
-
-1. The File 
-   &gt;
-    Export 
-   &gt;
-    X-Plane Object \(.obj\) \(which uses the current Scene\)
-2. The Instant Export button \(which uses the current Scene\)
-3. The Export All Scenes As OBJs Buttons \(planned, but maybe we better talking about that in light of how confusing this is getting...\)
-
-## But most importantly, how will the exporter know what to take?
+## How does the exporter search for Blender Objects to include in the OBJ?
 
 * In Layers Mode, the exporter will find all objects and their children in the current scene on each layer.
 * In Root Object the exporter will find all the specially marked "Root Objects" and their children.
 
 The exporter will never reach beyond the current scene, even following parent-child relationships.
+
+\*There are additional restrictions if an object is collected or ignored. See below for more details
+
+# How does each mode handle LODs?
+
+In both modes, the ranges and amount of LOD "buckets" are sepecified in the OBJ settings. In Layers Mode, each Blender Object can be put into LOD buckets by using checkboxes on an Object's property tab. In Root Objects mode, layers 1-4 are special if any LODs specified. Objects in layer 1 get put in bucket 1. Objects in layer 2 get put in bucket 2. Etc, etc, etc.
+
+# How should I structure my project?
+
+Some people like
+
+> 1 .blend file = All the .OBJ files for 1 airplane
+
+or
+
+> 1. blend file = The .OBJ for 1 scenery asset
+
+or
+
+> 1 .blend file = The .OBJs for multiple scenery assets
+
+A project can use multiple .blend files, each with multiple scenes, and each Scene can be in Layers Mode or Root Object Mode! Most people, however, keep things very simple - 1 .blend file with 1 Scene is enough
+
+# How can I organize my project's Blender Objects?
+
+* Armature and Empty datablocks can be used to invisibly group and organize Meshs, Lamps, etc. If using Armatures, children can be parented to Armature's bones, or to the Armature datablock itself
+* Technically, Meshes and Lights can also be tools for grouping, but they will export directives in the OBJ
+* A Blender Object can be set to appear in multiple 3D View Layers. This may be confusing to keep track of, but is a great way to reduce copying and pasting between layers. Depending on your export mode and/or LODs, the use of 3D View Layers could have additional semantics to keep track of.
+
+# How can I temporarily disable or enable which Blender Objects get exported?
+
+In order of most local to most gobal:
+
+1. For Layers Mode: If an object is hidden in the outliner, XPlane2Blender will skip exporting it and its children
+2. For Layers Mode: each Blender Object has a "Export Mesh In Layers" \(currently misnamed and misdescribed\), which acts as a second version of Blender's 3D View Layers. The layer the object is in must be visible AND it must be enabled in "Export Mesh In Layers". This allows you to see the Mesh or Lamp in the 3D View, but still not have it be in the OBJ. Most people never touch this.
+3. Put a Blender Object in a Layer or Root Object that isn't being exported \(or move a Blender Object entirely out of any Root Object's hierarchy of children\)
+4. Move a Blender Object to a new or different Scene. The exporter only inspects objects in the scene it started from.
+
+# How can I temporarily disable or enable an OBJ from exporting?
+
+In order from most local to most global:
+
+1. For Layers Mode: Layers mode only exports visible layers. Simply don't enable the layer you don't want to export.
+2. In the OBJ settings \(where the name, export type, and lods are set\), in the Advanced Settings section there is an Export Checkbox. If unchecked, the OBJ will not be exported.
+
+With all these options for temporarily showing/hiding Blender
+
+
+
+## 
+
+
 
