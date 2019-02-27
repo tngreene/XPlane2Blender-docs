@@ -4,10 +4,14 @@ XPlane2Blender has a variety of tools to allow you to work in the way that is be
 
 ## Layers Or Root Objects Mode?
 
-1. Layers mode uses Blender's 3D View visible layers to seperate OBJs. Any object and its children in a layer that is being exported into an OBJ will be collected\*. Therefore, a .blend file using Layers Mode can produce up to 20 OBJs per scene. An Object's LOD buckets are chosen by checkboxes in the Object's property tab. Since each layer must contain all the Blender Objects that will go into that OBJ, simple scenery objects fit nicely in it. Layers mode's checkbox style of specifying LODs is much more flexible than in Root Objects mode
+Layers Mode and Root Objects Mode support all the same features and it is easy to switch modes later on. The only difference is your preference of workflow.
+
+1. Layers mode uses Blender's 3D View visible layers to seperate OBJs. Any object and its children in a layer that is being exported into an OBJ will be collected\*. Therefore, a .blend file using Layers Mode can produce up to 20 OBJs per scene.Since each layer must contain all the Blender Objects that will go into that OBJ, simple scenery objects fit nicely in it. Layers mode's checkbox style of specifying LODs is much more flexible than in Root Objects mode
 2. Root Objects mode uses marked Objects and \*all the children \(and their nested children\) to make an OBJ. You can create any number of OBJs per file by using any number of Root Empty Objects. Objects can be put into different 3D View Layers, however there are additional rules when using LODs. The ability to use 3D View layers independently of producing OBJs is favored by Airplane aritsts making complex cockpits
 
-Layers Mode and Root Objects Mode support all the same features and it is easy to switch modes later on. The only difference is your preference of workflow.
+# What about LODs for each mode?
+
+ An Object's LOD buckets are chosen by checkboxes in the Object's property tab. 
 
 ## How does the exporter search for Blender Objects to include in the OBJ?
 
@@ -61,8 +65,6 @@ In order from most local to most global:
 2. In the OBJ settings \(where the name, export type, and lods are set\), in the Advanced Settings section there is an Export Checkbox. If unchecked, the OBJ will not be exported.
 
 With all these options for temporarily showing/hiding Blender
-
-
 
 ## 
 
