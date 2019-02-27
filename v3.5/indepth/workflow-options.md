@@ -27,6 +27,8 @@ In Layers Mode, each Blender Object can be put into LOD buckets by using checkbo
 
 ![](/assets/workflow_tutorial_obj_lod_bucket_choice.png)
 
+
+
 # How should I use .blend files?
 
 Some people like
