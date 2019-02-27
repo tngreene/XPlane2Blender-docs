@@ -6,12 +6,22 @@ XPlane2Blender has a variety of tools to allow you to work in the way that is be
 
 Layers Mode and Root Objects Mode support all the same features and it is easy to switch modes later on. The only difference is your preference of workflow.
 
-1. Layers mode uses Blender's 3D View visible layers to seperate OBJs. Any object and its children in a layer that is being exported into an OBJ will be collected\*. Therefore, a .blend file using Layers Mode can produce up to 20 OBJs per scene.Since each layer must contain all the Blender Objects that will go into that OBJ, simple scenery objects fit nicely in it. Layers mode's checkbox style of specifying LODs is much more flexible than in Root Objects mode
-2. Root Objects mode uses marked Objects and \*all the children \(and their nested children\) to make an OBJ. You can create any number of OBJs per file by using any number of Root Empty Objects. Objects can be put into different 3D View Layers, however there are additional rules when using LODs. The ability to use 3D View layers independently of producing OBJs is favored by Airplane aritsts making complex cockpits
+![](/assets/workflow_tutorial_obj_export_mode_menu.png)
 
-# What about LODs for each mode?
+1. Layers Mode makes an OBJ per visible 3D View Layer. \*Any object and its children on that layer will be collected, with a few exceptions. Therefore, a .blend file using Layers Mode can produce up to 20 OBJs per scene. Since all Blender Objects in an OBJ must be in 1 layer, scenery projects and Layers Mode pair well
+2. Root Objects mode uses marked Objects and \*all their children \(and their nested children\) to make an OBJ. You can create any number of OBJs per file by using any number of Root Empty Objects. Objects can be put into different 3D View Layers, however there are additional rules when using LODs. The ability to use 3D View layers independently of producing OBJs is favored by Airplane aritsts making complex cockpits
 
- An Object's LOD buckets are chosen by checkboxes in the Object's property tab. 
+\*There are additional restrictions if an object is collected or ignored. See below for more details
+
+# How does each mode handle LODs?
+
+In both modes, the amount and ranges of LOD "buckets" are sepecified in the OBJ settings.
+
+![](/assets/workflow_tutorial_obj_lod_settings.png)
+
+In Root Objects mode, 3D View layers 1-4 have a secial meaning if any LODs specified. Objects in layer 1 get put in bucket 1. Objects in layer 2 get put in bucket 2. Etc, etc, etc. Any objects on layers 5-20 won't exported under any circumstance.
+
+In Layers Mode, each Blender Object can be put into LOD buckets by using checkboxes on an Object's property tab. Layers Mode's checkboxes is more flexible than Root Object's mode.
 
 ## How does the exporter search for Blender Objects to include in the OBJ?
 
@@ -20,11 +30,9 @@ Layers Mode and Root Objects Mode support all the same features and it is easy t
 
 The exporter will never reach beyond the current scene, even following parent-child relationships.
 
-\*There are additional restrictions if an object is collected or ignored. See below for more details
 
-# How does each mode handle LODs?
 
-In both modes, the ranges and amount of LOD "buckets" are sepecified in the OBJ settings. In Layers Mode, each Blender Object can be put into LOD buckets by using checkboxes on an Object's property tab. In Root Objects mode, layers 1-4 are special if any LODs specified. Objects in layer 1 get put in bucket 1. Objects in layer 2 get put in bucket 2. Etc, etc, etc.
+# 
 
 # How should I structure my project?
 
