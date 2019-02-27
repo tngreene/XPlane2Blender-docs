@@ -21,7 +21,11 @@ In both modes, the amount and ranges of LOD "buckets" are sepecified in the OBJ 
 
 In Root Objects mode, 3D View layers 1-4 have a secial meaning if any LODs are specified. Objects in layer 1 get put in bucket 1. Objects in layer 2 get put in bucket 2. Etc, etc, etc. Any objects on layers 5-20 won't be exported under any circumstance.
 
-In Layers Mode, each Blender Object can be put into LOD buckets by using checkboxes on an Object's property tab. Some say this makes Layers Mode more flexible for using LODs than Root Object's use of layers 1-4.![](/assets/workflow_tutorial_obj_lod_bucket_choice.png)
+In Layers Mode, each Blender Object can be put into LOD buckets by using checkboxes on an Object's property tab. Some say this makes Layers Mode more flexible for using LODs than Root Object's use of layers 1-4.
+
+
+
+![](/assets/workflow_tutorial_obj_lod_bucket_choice.png)
 
 # How should I use .blend files?
 
