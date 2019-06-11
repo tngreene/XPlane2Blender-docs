@@ -42,13 +42,6 @@ Setting | Default | Description | Requirement(s)
 ``Draped Layer Group``|"None"|Like ``Layer Group`` but for draped objects| Only available for "Scenery" and "Instanced Scenery" exports
 ``Draped Layer Group Offset``|0|Like ``Layer Group Offset`` but for draped objects| Only available for "Scenery" and "Instanced Scenery" exports
 
-### Shadows
-Most shadow properties are set in the material settings, except for ``Cast Shadow (Global)``.
-
-Setting | Default | Description | Requirement(s)
-------- | ------- | ----------- | --------
-``Cast Shadow (Global)``| On | If unchecked, the exported OBJ will not cast any shadows|
-
 ### Slope Properties
 These settings change when and how a scenery object rests on the ground.
 
