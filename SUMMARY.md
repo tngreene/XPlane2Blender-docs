@@ -38,6 +38,9 @@
     * [Animation Requirments For Smart VR Manipulators](v3.5/indepth/animation_requirements_smart_manipulators.md)
     * [Creating Axis Detent Ranges](creating-axis-detent-ranges.md)
     * [Workflow Options](v3.5/indepth/workflow-options.md)
+* [>= v4.0](v4.0/index.md)
+  * [In Depth Articles](v4.0/indepth/40_indepth.md)
+    * [Split Animations](v4.0/indepth/split_animations.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
 
