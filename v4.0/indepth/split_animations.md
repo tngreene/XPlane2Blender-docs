@@ -20,8 +20,9 @@ Datablock Objects (Meshes, Lights, Armatures, Empties) can have 1 Object parent 
 In this example "MyParentMesh" **has** no parent and 1 child ("MyChildMesh"). Both are in **in** Collection C, but also in C's parents (B and A).
 Also, in this example, A is exportable. You'll see two other meshes in the .blend file "Inside_The_Exportable_Collection" and "Outside_The_Exportable_Collection". **Understanding what collections an object is in or out of is the key to this feature.**
 
-## Landing Gear an Wheel
-![landing gear example](./content/landing_gear_example.png)
+## Landing Gear and Wheel
+
+![From Scene_landing_gear_and_wheels](./content/landing_gear_example.png)
 
 Our two OBJs for the landing gear scene will be `ex5000_landing_gears.obj` and `ex5000_wheels.obj`. We made two exportable collections: `Landing Gear` and `Wheels` and give them specific filenames in their OBJ settings in the Scene Properties tab. The collections WHEEL_L and WHEEL_R aren't exportable collections (see how those boxes aren't checked in the Scene Properties Tab?) I'm using these non-exporting collections for how I want to organize my project. That's all. Next I'll make the meshes and armature.  I'll also animate the Armature bone.
 
@@ -34,14 +35,17 @@ A side effect of being able to split this into two OBJs is that you can have a s
 *Right now only 1 bone is supported - nested bone structures will come soon.
 
 ## Wing Flex and Lights
-![wing flex example](./content/wing_flex_example.png)
+
+![From Scene_wing_flex](./content/wing_flex_example.png)
 
 In the Scene_wing_flex example, all the same ideas apply: `RightWing` and `Lights` are my exportable collections, given specific filenames in the scene properties. `RightWing` has all the meshes of the wing, `Lights` has all the lights in the file. To reduce the work of synchronizing the movement of each, we're going to use the split-parent feature.
 
 Here I've animated a chain of Empties (Empty_wing_flex_1, 2, and 3) to represent the wing flexing. These empties are not in any collection. Each mesh and light is parented to one of the empties. Since the parent empties are outside the exportable collection, the animations of the empties is applied to it's children! 
 
 ## In X-Plane
-![split animation success](./content/split_animation_success.png)
+
+![Split Animation Success](./content/split_animation_success.png)
+
 As you can see in this final screenshot, the 4 OBJs attached to the BD-5J are working! Their animations are playing even though those animations came from places out of the exportable objects. Notice also how the landing gear doesn't have weird duplicate overlapping meshes! You will not get duplicate meshes with the split animation feature.
 
 Please let me know all the use cases you come up with with this exciting new feature.
