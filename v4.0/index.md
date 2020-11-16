@@ -1,1 +1,1 @@
-## Documentation for XPlane2Blender v4.0
+## Documentation for XPlane2Blender versions 4.0 and higher

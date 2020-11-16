@@ -40,6 +40,7 @@
     * [Workflow Options](v3.5/indepth/workflow-options.md)
 * [>= v4.0](v4.0/index.md)
   * [In Depth Articles](v4.0/indepth/40_indepth.md)
+    * [Installation](v4.0/indepth/40_installation.md)
     * [Split Animations](v4.0/indepth/split_animations.md)
 * [Reporting Bugs](reporting-bugs.md)
 * [Donations](donations.md)
